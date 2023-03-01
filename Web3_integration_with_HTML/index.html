@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapp</title>
+
+    <style>
+        div {
+          margin: 30px;
+          padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div >
+    <h1 style="text-align: center"> Staking contract Interaction with Web3.Js</h1>
+</div>
+<div>
+    <button style="text-align: center" id="connectButton" 
+        onclick ="connectMetaMask()">Connect</button>
+</div>
+
+<div>
+
+   
+        <label for="sAmount">amount:</label>
+        <input type="text" id="sAmount" name="sAmount"><br><br>
+        <label for="sPlan">plan:</label>
+        <input type="text" id="sPlan" name="sPlan"><br><br>
+        <button id="stakeFunction" onclick="Stake()" >Stake</button>
+    
+    
+
+</div>
+<div>
+
+   
+        <label for="wStakeNo">stakeNo</label>
+        <input type="text" id="wStakeNo" name="wStakeNo"><br><br>
+    
+        <button id="unStakeFunction" onclick="UnStake()">Withdraw</button>
+   
+
+</div>
+
+<div>
+    <button style="text-align: center" id="getEvents" 
+    onclick ="GetEvents()">getEvents</button>
+
+</div>
+
+<div>
+<h2>User detail will be:  </h2>
+<p>
+
+    <button style="text-align: center" id="getEvents" 
+    onclick ="GetUserDetail()">GetUserDetail</button>
+    <br>
+    user Total Staked: <span id="ttStake"> </span><br>
+    user StakeCount: <span id="stCount"> </span><br>
+    user TotalReward: <span id="ttReward"> </span><br>
+</p>
+
+</div>
+
+
+    <!-- <button onclick="callContract()"> Call the contract </button> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js" type="application/javascript"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
